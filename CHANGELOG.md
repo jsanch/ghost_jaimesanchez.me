@@ -19,8 +19,6 @@ _Showing 14 releases._
 * Merge pull request #1090 from bnchdrff/user-image-ff-fix (_John O'Nolan_)
 * Updating to bookshelf 0.5.7 & knex 0.4.11 (_Tim Griesser_)
 * Security improvements (_Sebastian Gierlinger_)
-* remove unneeded info from user api response (_Jeff Escalante_)
-* add vim cruft to gitignore (_buddhamagnet_)
 
 ## Release 0.3.3-1
 

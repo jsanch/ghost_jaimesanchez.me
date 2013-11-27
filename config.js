@@ -8,7 +8,7 @@ config = {
     // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
-        url: 'http://my-ghost-blog.com',
+        url: 'http://jaimesanchez.me',
 
         // Example mail config
         // Visit http://docs.ghost.org/mail for instructions
@@ -36,7 +36,7 @@ config = {
             // Host to be passed to node's `net.Server#listen()`
             host: '0.0.0.0',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: process.env.PORT
+            port: '80'
         }
     },
 
@@ -44,16 +44,12 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://my-ghost-blog.com',
+        url: 'http://jaimesanchez.me',
         mail: {},
         database: {
             client: 'sqlite3',
             connection: {
-                host: 'ec2-184-73-254-144.compute-1.amazonaws.com',
-                user: 'qsphrommrmrlin',
-                password: '5ETcD86lObzCoF9_zllv5SKwJR',
-                database: 'd9o0vf93pn9fq1',
-                port: '5432'
+                filename: path.join(__dirname, '/content/data/ghost.db')
             },
             debug: false
         },
@@ -61,7 +57,7 @@ config = {
             // Host to be passed to node's `net.Server#listen()`
             host: '0.0.0.0',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: process.env.PORT
+            port: '80'
         }
     },
 
@@ -71,7 +67,7 @@ config = {
     // Used when developing Ghost to run tests and check the health of Ghost
     // Uses a different port number
     testing: {
-        url: 'http://127.0.0.1:2369',
+        url: 'http://0.0.0.0:2369',
         database: {
             client: 'sqlite3',
             connection: {
@@ -79,8 +75,8 @@ config = {
             }
         },
         server: {
-            host: '127.0.0.1',
-            port: '2369'
+            host: '0.0.0.0',
+            port: '80'
         }
     },
 
